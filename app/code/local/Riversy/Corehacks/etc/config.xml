@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config>
+    <modules>
+        <Riversy_Corehacks>
+            <version>1.0.0</version>
+        </Riversy_Corehacks>
+    </modules>
+    <global>
+        <blocks>
+            <corehacks>
+                <class>Riversy_Corehacks_Block</class>
+            </corehacks>
+            <!-- Disable Navigation -->
+            <customer>
+                <rewrite>
+                    <account_navigation>Riversy_Corehacks_Block_Account_Navigation</account_navigation>
+                </rewrite>
+            </customer>
+            <!-- Hack Backend Currency precision -->
+            <adminhtml>
+                <rewrite>
+                    <widget_grid_column_renderer_currency>Riversy_Corehacks_Block_Adminhtml_Widget_Grid_Column_Renderer_Currency</widget_grid_column_renderer_currency>
+                </rewrite>
+            </adminhtml>
+            <catalog>
+                <rewrite>
+                    <category_view>Riversy_Corehacks_Block_Catalog_Category_View</category_view>
+                    <navigation>Riversy_Corehacks_Block_Catalog_Navigation</navigation>
+                </rewrite>
+            </catalog>
+        </blocks>
+        <models>
+            <corehacks>
+                <class>Riversy_Corehacks_Model</class>
+            </corehacks>
+            <!-- Hack Price Ranges -->
+            <catalog>
+                <rewrite>
+                    <layer_filter_price>Riversy_Corehacks_Model_Catalog_Layer_Filter_Price</layer_filter_price>
+                </rewrite>
+            </catalog>
+            <!-- Hack Currency percision -->
+            <directory>
+                <rewrite>
+                    <currency>Riversy_Corehacks_Model_Directory_Currency</currency>
+                </rewrite>
+            </directory>
+        </models>
+        <helpers>
+            <corehacks>
+                <class>Riversy_Corehacks_Helper</class>
+            </corehacks>
+        </helpers>
+
+		<resources>
+			<corehacks_setup>
+				<setup>
+					<module>Riversy_Corehacks</module>
+				</setup>
+				<connection>
+					<use>core_setup</use>
+				</connection>
+			</corehacks_setup>
+			<corehacks_read>
+				<connection>
+					<use>core_read</use>
+				</connection>
+			</corehacks_read>
+			<corehacks_write>
+				<connection>
+					<use>core_write</use>
+				</connection>
+			</corehacks_write>
+		</resources>
+    </global>
+    <frontend>
+        <layout>
+            <updates>
+                <corehacks>
+                    <file>hacks.xml</file>
+                </corehacks>
+            </updates>
+        </layout>
+    </frontend>
+    
+</config>
