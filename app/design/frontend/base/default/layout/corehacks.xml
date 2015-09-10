@@ -24,13 +24,17 @@
 
     <catalog_category_layered>
         <reference name="category.products">
-            <block type="corehacks/catalog_category_description" as="hacks.description" name="hacks.description"/>
+            <block type="corehacks/catalog_category_description"
+                   as="hacks.description"
+                   name="hacks.description"/>
         </reference>
     </catalog_category_layered>
 
     <catalog_category_default>
         <reference name="category.products">
-            <block type="corehacks/catalog_category_description" as="hacks.description" name="hacks.description"/>
+            <block type="corehacks/catalog_category_description"
+                   as="hacks.description"
+                   name="hacks.description"/>
         </reference>
     </catalog_category_default>
 
