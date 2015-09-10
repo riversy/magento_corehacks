@@ -45,6 +45,11 @@
                     <currency>Riversy_Corehacks_Model_Directory_Currency</currency>
                 </rewrite>
             </directory>
+            <core>
+                <rewrite>
+                    <locale>Riversy_Corehacks_Model_Core_Locale</locale>
+                </rewrite>
+            </core>
         </models>
         <helpers>
             <corehacks>
